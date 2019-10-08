@@ -1,14 +1,12 @@
 class Shoe
-  attr_accessor :color, :size, :material, :condition
-  attr_reader :brand
 
-  def initialize(brand)
-    @brand = brand
-  end
+BRANDS = []
 
-  def cobble
-    self.condition = "new"
-    puts "Your shoe is as good as new!"
+  def initialize(shoe_brand)
+    @brands = shoe_brand
+    if BRANDS.include?(shoe_brand) == false
+    BRANDS << shoe_brand
+    end
   end
 
 end
